@@ -1,7 +1,7 @@
-name = "Ritzy"
+name = "ritzy"
 license = "MIT"
 licenselink = "https://github.com/ddritzenhoff/ritzy/blob/master/LICENSE"
-description = "A simple Hugo theme focused on blogging and information density."
+description = "ritzy is a simple Hugo theme focused on blogging and information density. Hacker News inspired!"
 tags = ["blog", "density"]
 features = []
 min_version = "0.41.0"
