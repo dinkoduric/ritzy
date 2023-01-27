@@ -1,0 +1,37 @@
+{{ define "main" }}
+<center>
+    <table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="white">
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0">
+                    {{ range $index, $element := (where .Site.RegularPages "Type" "in" "posts") }}
+                    <tr class="athing" id="34457657">
+                        <td align="right" valign="top" class="title">
+                            <span class="rank">{{ $index }}.</span>
+                        </td>
+                        <td valign="top" class="votelinks"></td>
+                        <td class="title">
+                            <span class="titleline"><a href="{{ .RelPermalink }}">{{ .Title }}</a><span
+                                    class="sitebit comhead">
+                                </span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td class="subtext">
+                            <span class="subline">
+                                <span class="age" title="2023-01-20T18:39:41">{{ .Date.Format "January 2, 2006"
+                                    }}</span> |
+                                {{ range .Params.tags }}
+                                <a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
+                                {{ end }}
+                            </span>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </table>
+            </td>
+        </tr>
+    </table>
+</center>
+{{ end }}
